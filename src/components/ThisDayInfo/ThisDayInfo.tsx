@@ -1,35 +1,37 @@
 import cloud from '../../assets/images/cloud.png'
+import { Weather } from '../../redux/types';
 import style from './ThisDayInfo.module.scss'
 import { ThisDayItems } from './ThisDayItems';
 
-interface Props {}
+interface Props {weather: Weather}
 export interface Item {
     icon_id: string;
     name: string;
     value: string
   }
 
-export const ThisDayInfo = (props: Props) => {
+export const ThisDayInfo = ({weather}: Props) => {
+  console.log({weather})
     const items = [
         {
           icon_id: 'temp',
           name: 'Температура',
-          value: '20° - ощущается как 17°',
+          value: `${Math.floor(weather.main.temp)}° C`,
         },
         {
           icon_id: 'pressure',
-          name: 'Давление',
-          value: '765 мм ртутного столба - нормальное',
+          name: 'Тиск',
+          value: `${weather.main.pressure} мм ртутного стовпчика`,
         },
         {
           icon_id: 'precipitation',
-          name: 'Осадки',
-          value: 'Без осадков',
+          name: 'Опади',
+          value: 'Без осадків',
         },
         {
           icon_id: 'wind',
-          name: 'Ветер',
-          value: '3 м/с юго-запад - легкий ветер',
+          name: 'Вітер',
+          value:  `${weather.wind.speed} m/s південно-західний - легкий вітер`,
         },
       ];
     return (

@@ -1,12 +1,16 @@
 import { configureStore, combineReducers } from "@reduxjs/toolkit"
-import currentWeatherSliceReduser from './currentWeather_slice'
+import currentWeatherSliceReducer from './currentWeather_slice'
 
-const rootReduser = combineReducers({currentWeatherSliceReduser})
-
-export const store = configureStore({
-    reducer: rootReduser,
-})
-
-export type RootState = ReturnType<typeof rootReduser>
-export type AppStore = typeof store
-export type AppDispatch = AppStore['dispatch']
+const rootReducer = combineReducers({currentWeatherSliceReducer});
+  
+  export const store = configureStore({
+    reducer: rootReducer,
+    middleware: getDefaultMiddleware =>
+      getDefaultMiddleware({
+        serializableCheck: false
+      })
+  })
+  
+  export type RootState = ReturnType<typeof rootReducer>;
+  export type AppStore = typeof store;
+  export type AppDispatch = AppStore['dispatch'];

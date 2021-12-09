@@ -6,6 +6,6 @@ export class WeatherService {
     static getCurrentWeather(city: string):
      Promise<AxiosResponse<Weather>> {
         return api.get<Weather>(
-            `/weather?q=tokyo`)
+            `/weather?q=${city}`)
     }
 }

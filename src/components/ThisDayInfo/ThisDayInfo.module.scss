@@ -4,7 +4,7 @@
     position: relative;
     padding: 40px;
     min-width: 450px;
-    width: 100%;
+    width: 90vw;
     background: var(#{--components-background-default});
     box-shadow: $box-shadow;
     border-radius: $border-radius;
@@ -36,11 +36,11 @@
         border-radius: 50%;
     }
     .indicator__name {
-        font-size: 14px;
-        color: $base-color;
+        font-size: 18px;
+        color: var(#{--text-color-default});
     }
     .indicator__value {
-        font-size: 14px;
+        font-size: 18px;
         color: var(#{--text-color-default});
     }
 }
@@ -49,5 +49,17 @@
     position: absolute;
     top: 0;
     right: 0;
+}
 
+@media screen and (max-width: 867px) {
+    .this__day_info {
+        margin: 0 20px;
+        max-width: 90%;
+        padding: 40px 20px;
+        margin: 15px auto;
+    }
+
+    .cloud__img {
+        display: none;
+    }
 }

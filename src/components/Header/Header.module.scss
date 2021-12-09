@@ -17,6 +17,7 @@
 .change_theme,
 .logo {
     margin-right: 20px;
+    cursor: pointer;
 
     svg {
         width: 65px;
@@ -29,4 +30,10 @@
     font-weight: bold;
     font-size: 30px;    
     color: $primary-color;
+}
+
+@media screen and (max-width: 867px) {
+    .header {
+        display:block;
+    }
 }

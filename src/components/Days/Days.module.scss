@@ -14,18 +14,21 @@
 .card {
     display: flex;
     flex-direction: column;
-    background:  var(#{--components-background-default});
-    border-radius: 10px;
     padding: 10px;
     width: 149px;
     transition: 0.3s;
     cursor: pointer;
+    border-right: var(#{--right-border-default});
+    
+    &:last-child {
+        border-right: none
+    }
 
     .day {
         margin-bottom: 7px;
         font-size: 18px;
     }
-    .days_info {
+    .day__info{
         font-size: 14px;
         margin-bottom: 12px;
         color: $base-color;
@@ -33,18 +36,18 @@
     .img {
         margin-bottom: 12px;
     }
-    .temp_day {
+    .day__temp_day {
         font-size: 18px;
         color: var(#{--text-color-default});
     }
-    .temp_night {
+    .day__temp_night {
         font-size: 13px;
-        color: $base-color;
+        color: var(#{--text-color-default});
         margin-bottom: 6px;        
     }
-    .info {
+    .day__info {
         font-size: 13px;
-        color: $base-color;
+        color: var(#{--text-color-default});
     }
     &:hover  {
         box-shadow: var(#{--card-shadow-default});
@@ -54,7 +57,7 @@
 .tabs {
     display: flex;
     justify-content: space-between;
-    margin-bottom: 7px;
+    
 
     .tabs__warpper {
         display: flex;
@@ -63,7 +66,7 @@
     .cancel,
     .tab {
         box-shadow: 2px 5px 25px -3px rgba(180,180,180,0.25);
-        border-radius: 5px;
+        border-radius: 5px 5px 0 0;
         padding: 9px 20px;
         background: var(#{--components-background-default});
         margin-right: 15px;
@@ -72,7 +75,6 @@
         display: flex;
         align-items: center;
         justify-content: center;
-        margin-right: 15px;
         cursor: pointer;
     }
     .tab {
@@ -86,4 +88,16 @@
     }
 }
 
+@media screen and (max-width: 867px) {
+    
+    .tabs {
+        padding: 0 6px;
 
+        .tab {
+            padding: 8px 10px;
+            margin-right: 8px;
+        }
+    }
+    
+
+}

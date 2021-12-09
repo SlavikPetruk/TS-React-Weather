@@ -1,24 +1,29 @@
-import React from 'react'
 import { GlobalSvgSelector } from '../../assets/icons/GlobalSvgSelector'
+import { Weather } from '../../redux/types'
 import style from './ThisDay.module.scss'
 
 interface Props {
-    
+    weather: Weather;
 }
 
-export const ThisDay = (props: Props) => {
+const now = new Date()
+
+export const ThisDay = ({weather}: Props) => {
     return (
         <div className={style.this__day}>
             <div className={style.top__block}>
                 <div className={style.top__block_wrapper}>
-                    <div className={style.this__temp}>20*</div>
+                    <div className={style.this__temp}>{Math.floor(weather.main.temp)}°</div>
                     <div className={style.this__day_name}>Today</div>
                 </div>        
                 <GlobalSvgSelector id="sun" />        
             </div>
             <div className={style.bottom__block}>
-                <div className={style.this__time}>Time: <span>15:42</span></div>
-                <div className={style.this__city}>City: <span>Truskavets</span></div>   
+                <div className={style.this__time}>Time: 
+                <span className='value'>  {`${now.getHours()} : ${now.getMinutes()}`}
+                    </span>
+                </div>
+                <div className={style.this__city}>City: <span className='value'>Truskavets</span></div>   
             </div>
         </div>
     )

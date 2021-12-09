@@ -4,18 +4,18 @@ import './styles/index.scss';
 import App from './App';
 import { BrowserRouter } from 'react-router-dom';
 import {ThemeProvider} from './hooks/usecontext/ThemeProvider'
-// import { store } from './redux/store';
-// import { Provider } from 'react-redux';
+import { store } from './redux/store';
+import { Provider } from 'react-redux';
 
 ReactDOM.render(
   <React.StrictMode>
-    {/* <Provider store={store}> */}
+    <Provider store={store}>
       <BrowserRouter>
         <ThemeProvider>
           <App/>
         </ThemeProvider>
       </BrowserRouter>
-    {/* </Provider> */}
+    </Provider>
   </React.StrictMode>,
   document.getElementById('root')
 );

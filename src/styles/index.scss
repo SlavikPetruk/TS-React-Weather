@@ -2,6 +2,10 @@
 @import './variables.scss';
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;500;600;700&display=swap');
 
+html {
+    background-color: #495f8d;
+}
+
 *, 
 *:after, 
 *:before {
@@ -11,11 +15,30 @@
 
 body {
     font-family: 'Montserrat', sans-serif;
-    background: var(#{--body-background-default});
+    background: url("../assets/images/body.jpg") center no-repeat;
+    background-size: cover;
     }
+    
+.body__wrapper{
+    backdrop-filter: blur(2px);
+
+}
 
 .container {
     max-width: 1200px;
+    min-height: 100vh;
     padding-top: 20px;
     margin: 0 auto;
+}
+
+.value {
+    font-weight: 500;
+}
+
+@media screen and (max-width: 867px) {
+    
+    body  {
+        width: 100vw;
+    }
+    
 }

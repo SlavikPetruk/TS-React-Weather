@@ -8,8 +8,8 @@ import { Theme } from '../../hooks/usecontext/ThemeContext'
 export const Header = () => {
     const theme = useTheme();
     const options = [
-        { value: 'city1', label: 'Truskavets' },
-        { value: 'city2', label: 'Drogobych' },
+        { value: 'city1', label: 'Kiev' },
+        { value: 'city2', label: 'Truskavets' },
         { value: 'city3', label: 'Lviv' }
       ]
 
