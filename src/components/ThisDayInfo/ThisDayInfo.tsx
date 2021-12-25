@@ -11,7 +11,7 @@ export interface Item {
   }
 
 export const ThisDayInfo = ({weather}: Props) => {
-  console.log({weather})
+  // console.log({weather})
     const items = [
         {
           icon_id: 'temp',

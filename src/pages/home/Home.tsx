@@ -7,16 +7,14 @@ import { fetchCurrentWeather } from '../../redux/currentWeather_fetch'
 import { selectCurrentWeatherData } from '../../redux/selectors'
 import s from './Home.module.scss'
 
-interface Props {
-}
 
-export const Home = (props: Props) => {
+export const Home = () => {
     const dispatch = useCustomDispatch()
     const { weather } = useCustomSelector(selectCurrentWeatherData);
   
     useEffect(() => {
       dispatch(fetchCurrentWeather('kiev'));
-    }, []);
+    }, [dispatch]);
 
     return (
       <div className={s.home}>

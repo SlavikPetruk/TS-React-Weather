@@ -6,7 +6,8 @@ interface Props {
     day: Day;
 }
 
-export const Card = ({day}: Props) => {
+export const Card = ({day}: Props) => {    
+    
     return (
         <div className={style.card}>
             <div className={style.day}><span className='value'>{day.day}</span></div>

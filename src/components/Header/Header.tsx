@@ -37,7 +37,7 @@ export const Header = () => {
     return (
         <header className={style.header}>
             <div className={style.wrapper}>
-                <div className={style.logo}><GlobalSvgSelector id="header-logo" /></div>
+                <div className={style.logo}><img src='/weather.png' alt='weather'  /></div>
                 <div className={style.title}>React Weather</div>
             </div>
             <div className={style.wrapper}>

@@ -8,7 +8,7 @@ api.interceptors.request
                 .use(config => {
     config.url = config.url + 
                 '&units=metric' + 
-                    
+                    '&exclude=hourly,minutely' +
                             '&appid=' +
                         process.env.REACT_APP_API_KEY
     return config
