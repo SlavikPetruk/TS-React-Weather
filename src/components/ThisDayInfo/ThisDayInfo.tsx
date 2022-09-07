@@ -16,12 +16,12 @@ export const ThisDayInfo = ({weather}: Props) => {
         {
           icon_id: 'temp',
           name: 'Температура',
-          value: `${Math.floor(weather.main.temp)}° C`,
+          value: `${Math.floor(weather.main.temp)}°`,
         },
         {
           icon_id: 'pressure',
           name: 'Тиск',
-          value: `${weather.main.pressure} мм ртутного стовпчика`,
+          value: `${Math.floor(weather.main.pressure)} мм ртутного стовпчика`,
         },
         {
           icon_id: 'precipitation',

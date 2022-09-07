@@ -5,13 +5,13 @@ interface Props {}
 export const Tabs = (props: Props) => {
     const tabs = [
         {
-          value: 'На неделю',
+          value: 'На тиждень',
         },
         {
-          value: 'На 10 дней',
+          value: 'На 10 днів',
         },
         {
-          value: 'На месяц',
+          value: 'На місяць',
         },
       ];
     return (

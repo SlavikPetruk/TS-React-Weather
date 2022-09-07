@@ -13,7 +13,10 @@ export const ThisDay = ({weather}: Props) => {
         <div className={style.this__day}>
             <div className={style.top__block}>
                 <div className={style.top__block_wrapper}>
-                    <div className={style.this__temp}>{Math.floor(weather.main.temp)}°</div>
+                    <div className={style.this__temp}>
+                        {Math.floor(weather.main.temp)}°
+                        
+                        </div>
                     <div className={style.this__day_name}>Today</div>
                 </div>        
                 <GlobalSvgSelector id="sun" />        
@@ -23,7 +26,7 @@ export const ThisDay = ({weather}: Props) => {
                 <span className='value'>  {`${now.getHours()} : ${now.getMinutes()}`}
                     </span>
                 </div>
-                <div className={style.this__city}>City: <span className='value'>Truskavets</span></div>   
+                <div className={style.this__city}>City: <span className='value'>{weather.name}</span></div>   
             </div>
         </div>
     )
